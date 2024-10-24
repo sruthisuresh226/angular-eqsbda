@@ -1,0 +1,17 @@
+<h1>Login Form</h1>
+<form [formGroup]="LoginForm">
+  <div>
+    Mobile No :
+    <input type="number" minlength="10" required formcontrolname="mobile" />
+  </div>
+  <div>Email Id : <input type="text" formcontrolname="email" required /></div>
+  <div>Password : <input type="password" formcontrolname="pwd" required /></div>
+  <div>
+    Confirm Password :
+    <input type="text" required formcontrolname="confirmpwd" />
+
+    <span *ngIf="pwdError" style="color:'red"
+      >Password and Confirm passwrod should be same</span
+    >
+  </div>
+</form>
